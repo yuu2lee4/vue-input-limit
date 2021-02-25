@@ -8,8 +8,8 @@
   "scripts": {
     "build": "rollup -c --environment INCLUDE_DEPS,BUILD:production"
   },
-  "repository": "https://github.com/naifen00/vue-input-limit.git",
-  "author": "liqianyong",
+  "repository": "https://github.com/yuu2lee4/vue-input-limit",
+  "author": "yuu2lee4",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.2.2",
