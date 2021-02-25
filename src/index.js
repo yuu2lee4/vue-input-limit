@@ -1,5 +1,5 @@
 export default {
-    bind(el, binding) {
+    beforeMount(el, binding) {
         const type = Object.prototype.toString.call(binding.value);
         const input = el.nodeName.toUpperCase() === 'INPUT' ? el : el.querySelector('input');
         let composing = false;
@@ -10,7 +10,7 @@ export default {
         } else if (type === '[object Function]') {
             filter = binding.value;
         } else {
-            throw new Error(`[Vue-input-limit:] ${binding.expression} is not a function or regexp`);
+            throw new Error(`[Vue-input-limit:] expression is not a function or regexp`);
         }
 
         input.addEventListener('compositionstart', () => {

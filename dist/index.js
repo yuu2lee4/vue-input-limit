@@ -1,21 +1,21 @@
 /*!
- * VueInputLimit.js v0.1.1
+ * Vue3InputLimit.js v0.0.1
  * https://github.com/naifen00/vue-input-limit#readme
  *
  * Copyright 2015-present liqianyong
  * Released under the MIT license
  *
- * Date: 2019-01-30T10:30:30.142Z
+ * Date: 2021-02-25T03:21:40.030Z
  */
 
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
     typeof define === 'function' && define.amd ? define(factory) :
-    (global = global || self, global.VueInputLimit = factory());
-}(this, function () { 'use strict';
+    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Vue3InputLimit = factory());
+}(this, (function () { 'use strict';
 
     var index = {
-      bind: function bind(el, binding) {
+      beforeMount: function beforeMount(el, binding) {
         var type = Object.prototype.toString.call(binding.value);
         var input = el.nodeName.toUpperCase() === 'INPUT' ? el : el.querySelector('input');
         var composing = false;
@@ -29,7 +29,7 @@
         } else if (type === '[object Function]') {
           filter = binding.value;
         } else {
-          throw new Error("[Vue-input-limit:] ".concat(binding.expression, " is not a function or regexp"));
+          throw new Error("[Vue-input-limit:] expression is not a function or regexp");
         }
 
         input.addEventListener('compositionstart', function () {
@@ -60,4 +60,4 @@
 
     return index;
 
-}));
+})));

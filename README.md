@@ -5,15 +5,15 @@ Vue input limit directive.
 
 ### yarn | npm
 ```
-yarn add vue-input-limit
+yarn add vue3-input-limit
 or
-$ npm install vue-input-limit -S
+$ npm install vue3-input-limit -S
 ```
 
 ### CDN
 
 ```
-<script src="https://unpkg.com/vue-input-limit"></script>  
+<script src="https://unpkg.com/vue3-input-limit"></script>  
 ```
 
 
@@ -27,7 +27,7 @@ $ npm install vue-input-limit -S
 </template>
 
 <script>
-import inputLimit from 'vue-input-limit';
+import inputLimit from 'vue3-input-limit';
 
 export default {
     directives: {
